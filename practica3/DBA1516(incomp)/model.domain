@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<domain:PDomain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:conditions="http://www.iactive.es/planner/model/domain/model/conditions" xmlns:domain="http://www.iactive.es/planner/model/domain" xmlns:expressions="http://www.iactive.es/planner/model/domain/model/expressions" xmlns:protocols="http://www.iactive.es/planner/model/domain/model/protocols" xmlns:terms="http://www.iactive.es/planner/model/domain/model/terms" xmlns:time="http://www.iactive.es/planner/model/domain/time" xmlns:types="http://www.iactive.es/planner/model/core/instances/types" name="DBA1516" author="User" description="" language="English" version="1.99.6" userVersion="1.0" creation="2016-05-14T17:06:48.997+0200" isTimed="true" canUseTime="true" canUseParallelBranches="true">
+  <tasks name="Assistant" iterable="true" iterationType="parallel" main="true">
+    <decompositions xsi:type="protocols:PMethod" name="HIGH">
+      <condition xsi:type="conditions:PPredicateCondition" classType="//@classes.0" functor="//@classes.0/@properties.2">
+        <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.0"/>
+        <terms xsi:type="terms:PLiteralTerm">
+          <literal xsi:type="types:PString" type="//@dataTypeFactory/@stringDataType" content="HIGH"/>
+        </terms>
+      </condition>
+    </decompositions>
+    <decompositions xsi:type="protocols:PMethod" name="LOW">
+      <condition xsi:type="conditions:PPredicateCondition" classType="//@classes.0" functor="//@classes.0/@properties.2">
+        <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.0"/>
+        <terms xsi:type="terms:PLiteralTerm">
+          <literal xsi:type="types:PString" type="//@dataTypeFactory/@stringDataType" content="LOW"/>
+        </terms>
+      </condition>
+    </decompositions>
+    <decompositions xsi:type="protocols:PMethod" name="UNKNOWN" collapsed="true"/>
+    <iterationContext iterationVariables="//@tasks.0/@iterationContext/@variables.0" scope="//@tasks.0" domain="/">
+      <variables name="who" type="//@classes.0"/>
+      <variables name="gID" type="//@dataTypeFactory/@integerDataType"/>
+      <iterationCondition xsi:type="conditions:PConjunctiveCondition">
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.0" functor="//@classes.0/@properties.0">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.1"/>
+        </conditions>
+      </iterationCondition>
+    </iterationContext>
+  </tasks>
+  <tasks name="LOGIN">
+    <variables name="who" type="//@classes.0"/>
+    <variables name="where" type="//@enumerations.1"/>
+    <decompositions xsi:type="protocols:PAction">
+      <startVariable name="start" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <endVariable name="end" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <timeConstraint xsi:type="time:PSimpleTimeConstraint">
+        <expressionA dataTypeFactory="//@dataTypeFactory" variable="duration"/>
+        <expressionB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+          <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="1"/>
+        </expressionB>
+      </timeConstraint>
+      <prettyPrint xsi:type="expressions:PConcatenatedStringExpression" dataTypeFactory="//@dataTypeFactory">
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.1/@variables.0"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=" must log into world "/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.1/@variables.1"/>
+        </strings>
+      </prettyPrint>
+    </decompositions>
+  </tasks>
+  <tasks name="MOVE">
+    <variables name="who" type="//@classes.0"/>
+    <variables name="where" type="//@enumerations.1"/>
+    <decompositions xsi:type="protocols:PAction">
+      <startVariable name="start" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <endVariable name="end" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <timeConstraint xsi:type="time:PSimpleTimeConstraint">
+        <expressionA dataTypeFactory="//@dataTypeFactory" variable="duration"/>
+        <expressionB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+          <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="1"/>
+        </expressionB>
+      </timeConstraint>
+      <prettyPrint xsi:type="expressions:PConcatenatedStringExpression" dataTypeFactory="//@dataTypeFactory">
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.2/@variables.0"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=" try to move into world "/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.2/@variables.1"/>
+        </strings>
+      </prettyPrint>
+    </decompositions>
+  </tasks>
+  <tasks name="REFUEL">
+    <variables name="who" type="//@classes.0"/>
+    <variables name="where" type="//@enumerations.1"/>
+    <decompositions xsi:type="protocols:PAction">
+      <startVariable name="start" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <endVariable name="end" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <timeConstraint xsi:type="time:PSimpleTimeConstraint">
+        <expressionA dataTypeFactory="//@dataTypeFactory" variable="duration"/>
+        <expressionB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+          <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="1"/>
+        </expressionB>
+      </timeConstraint>
+      <prettyPrint xsi:type="expressions:PConcatenatedStringExpression" dataTypeFactory="//@dataTypeFactory">
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.3/@variables.0"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=" refuel in world "/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.3/@variables.1"/>
+        </strings>
+      </prettyPrint>
+    </decompositions>
+  </tasks>
+  <tasks name="SUCCESS">
+    <variables name="who" type="//@classes.0"/>
+    <variables name="where" type="//@enumerations.1"/>
+    <decompositions xsi:type="protocols:PAction">
+      <startVariable name="start" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <endVariable name="end" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <timeConstraint xsi:type="time:PSimpleTimeConstraint">
+        <expressionA dataTypeFactory="//@dataTypeFactory" variable="duration"/>
+        <expressionB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+          <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="1"/>
+        </expressionB>
+      </timeConstraint>
+      <prettyPrint xsi:type="expressions:PConcatenatedStringExpression" dataTypeFactory="//@dataTypeFactory">
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.4/@variables.0"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=" try to succeed in world "/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.4/@variables.1"/>
+        </strings>
+      </prettyPrint>
+    </decompositions>
+  </tasks>
+  <classes name="Group" domain="/" primaryKey="//@classes.0/@properties.0">
+    <metaTags name="__prettyPrint" type="//@dataTypeFactory/@stringDataType" context="//@classes.0">
+      <expression xsi:type="expressions:PFluentExpression" dataTypeFactory="//@dataTypeFactory" classType="//@classes.0" property="//@classes.0/@properties.1" variable="//@classes.0/@thisVar"/>
+    </metaTags>
+    <properties name="Id" type="//@dataTypeFactory/@integerDataType" classType="//@classes.0" lowerBound="1" upperBound="-2" autoIncrement="true"/>
+    <properties name="Name" type="//@dataTypeFactory/@stringDataType" classType="//@classes.0" lowerBound="1" upperBound="-2"/>
+    <properties name="Ambition" type="//@dataTypeFactory/@stringDataType" classType="//@classes.0"/>
+    <thisVar name="this" type="//@classes.0"/>
+  </classes>
+  <enumerations name="Action" domain="/">
+    <elements name="LOGIN" type="//@enumerations.0" enumeration="//@enumerations.0"/>
+    <elements name="MOVE" type="//@enumerations.0" enumeration="//@enumerations.0"/>
+    <elements name="REFUEL" type="//@enumerations.0" enumeration="//@enumerations.0"/>
+    <elements name="SUCCESS" type="//@enumerations.0" enumeration="//@enumerations.0"/>
+  </enumerations>
+  <enumerations name="World" domain="/">
+    <elements name="map1" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+    <elements name="map2" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+    <elements name="map3" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+    <elements name="map4" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+    <elements name="map5" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+    <elements name="map6" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+    <elements name="map7" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+    <elements name="map8" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+    <elements name="map9" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+    <elements name="map10" type="//@enumerations.1" enumeration="//@enumerations.1"/>
+  </enumerations>
+  <dataTypeFactory defaultTimeUnit="HOUR">
+    <objectDataType name="Object" typeID="POBJECT"/>
+    <booleanDataType name="Boolean" typeID="PBOOLEAN"/>
+    <integerDataType name="Integer" typeID="PINTEGER" canBePrimaryKey="true"/>
+    <timeDeltaDataType name="TimeDelta" typeID="PTIMEDELTA"/>
+    <numberDataType name="Number" typeID="PNUMBER" canBePrimaryKey="true"/>
+    <floatDataType name="Float" typeID="PFLOAT" canBePrimaryKey="true"/>
+    <doubleDataType name="Double" typeID="PDOUBLE" canBePrimaryKey="true"/>
+    <dateTimeDataType name="DateTime" typeID="PDATETIME"/>
+    <stringDataType name="String" typeID="PSTRING" canBePrimaryKey="true"/>
+    <dateTimeSetDataType name="DateTimeSet" typeID="PDATETIMESET"/>
+    <timeReferenceDataType name="TimeReference" typeID="PTIMEREFERENCE"/>
+    <nullDataType name="Null"/>
+    <trueValue type="//@dataTypeFactory/@booleanDataType" content="true"/>
+    <falseValue type="//@dataTypeFactory/@booleanDataType"/>
+    <nullValue type="//@dataTypeFactory/@nullDataType"/>
+    <nullVariable name="Null" type="//@dataTypeFactory/@nullDataType"/>
+  </dataTypeFactory>
+  <libraryManager/>
+</domain:PDomain>

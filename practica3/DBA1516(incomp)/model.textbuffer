@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<textbuffer:TextBufferContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CMKtextbuffer="http://www.iactive.es/textbuffer/cmktextbuffer" xmlns:EBKtextbuffer="http://www.iactive.es/textbuffer/ebktextbuffer" xmlns:textbuffer="http://www.iactive.es/planner/language/hpdl/textbuffer">
+  <textBufferList xsi:type="CMKtextbuffer:PClassTypeTextBuffer" descriptionTextBuffer="" toStringTextBuffer="(Group.Name ?this)&#xD;&#xA;">
+    <pclasstype href="model.domain#//@classes.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PPropertyTextBuffer" descriptionTextBuffer="">
+    <pproperty href="model.domain#//@classes.0/@properties.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PEnumerationTextBuffer" descriptionTextBuffer="">
+    <penumeration href="model.domain#//@enumerations.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PEnumerationTextBuffer" descriptionTextBuffer="">
+    <penumeration href="model.domain#//@enumerations.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="(Group.Ambition ?who &quot;HIGH&quot;)">
+    <method href="model.domain#//@tasks.0/@decompositions.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PActionTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING" conditionTextBuffer="" conditionStatus="PENDING" effectTextBuffer="" effectStatus="PENDING" actionTextBuffer="(+ (str ?who) &quot; must log into world &quot; &#xD;&#xA;&#x9;(str ?where) )  " durationTextBuffer="(== $duration 1)">
+    <ptask href="model.domain#//@tasks.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PActionTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING" conditionTextBuffer="" conditionStatus="PENDING" effectTextBuffer="" effectStatus="PENDING" actionTextBuffer="(+ (str ?who) &quot; try to move into world &quot; &#xD;&#xA;&#x9;(str ?where) )  " durationTextBuffer="(== $duration 1)">
+    <ptask href="model.domain#//@tasks.2"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PActionTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING" conditionTextBuffer="" conditionStatus="PENDING" effectTextBuffer="" effectStatus="PENDING" actionTextBuffer="(+ (str ?who) &quot; refuel in world &quot; &#xD;&#xA;&#x9;(str ?where) )  " durationTextBuffer="(== $duration 1)">
+    <ptask href="model.domain#//@tasks.3"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PActionTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING" conditionTextBuffer="" conditionStatus="PENDING" effectTextBuffer="" effectStatus="PENDING" actionTextBuffer="(+ (str ?who) &quot; try to succeed in world &quot; &#xD;&#xA;&#x9;(str ?where) )  " durationTextBuffer="(== $duration 1)">
+    <ptask href="model.domain#//@tasks.4"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="(and&#xD;&#xA;&#x9;(Group.Id ?who ?gID) &#xD;&#xA;) ">
+    <ptask href="model.domain#//@tasks.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PPropertyTextBuffer" descriptionTextBuffer="">
+    <pproperty href="model.domain#//@classes.0/@properties.2"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="(Group.Ambition ?who &quot;LOW&quot;)">
+    <method href="model.domain#//@tasks.0/@decompositions.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="" preconditionStatus="PENDING">
+    <method href="model.domain#//@tasks.0/@decompositions.2"/>
+  </textBufferList>
+</textbuffer:TextBufferContainer>

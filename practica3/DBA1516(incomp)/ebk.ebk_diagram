@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:protocols="http://www.iactive.es/planner/model/domain/model/protocols" xsi:schemaLocation="http://www.iactive.es/planner/model/domain/model/protocols http://www.iactive.es/planner/model/domain#//protocols" xmi:id="_e2kb8BnlEeaEgJst7oYwVA" type="es.iactive.studio.ebk.diagram" name="Assistant" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_e2kb8RnlEeaEgJst7oYwVA" type="12003">
+    <children xmi:type="notation:Node" xmi:id="_e2kb8hnlEeaEgJst7oYwVA" type="15002"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_e2kb8xnlEeaEgJst7oYwVA" fontName="Segoe UI"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e2kb9BnlEeaEgJst7oYwVA" x="250" y="5"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_e2kb9RnlEeaEgJst7oYwVA"/>
+  <element xmi:type="protocols:PTask" href="model.domain#//@tasks.0"/>
+</notation:Diagram>

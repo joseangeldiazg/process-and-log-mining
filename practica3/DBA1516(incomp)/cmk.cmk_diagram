@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:concepts="http://www.iactive.es/planner/model/domain/model/concepts" xmlns:domain="http://www.iactive.es/planner/model/domain" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xsi:schemaLocation="http://www.iactive.es/planner/model/domain/model/concepts http://www.iactive.es/planner/model/domain#//concepts" xmi:id="_e2lqEBnlEeaEgJst7oYwVA" type="es.iactive.planner.model.domain" name="cmk.cmk_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_iu_fABnlEeaEgJst7oYwVA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ivCiUBnlEeaEgJst7oYwVA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ivEXgBnlEeaEgJst7oYwVA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_ivIo8BnlEeaEgJst7oYwVA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.0/@properties.0"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ivIo8RnlEeaEgJst7oYwVA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_kQr7QBnlEeaEgJst7oYwVA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.0/@properties.1"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_kQr7QRnlEeaEgJst7oYwVA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_hxRK4F0kEeivYdFUFwaEnw" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.0/@properties.2"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_hxRK4V0kEeivYdFUFwaEnw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ivEXgRnlEeaEgJst7oYwVA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ivEXghnlEeaEgJst7oYwVA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ivEXgxnlEeaEgJst7oYwVA" type="5002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ivEXhBnlEeaEgJst7oYwVA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ivEXhRnlEeaEgJst7oYwVA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_iu_fARnlEeaEgJst7oYwVA" fontName="Segoe UI"/>
+    <element xmi:type="concepts:PClassType" href="model.domain#//@classes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iu_fAhnlEeaEgJst7oYwVA" x="34" y="68"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_e2lqERnlEeaEgJst7oYwVA"/>
+  <element xmi:type="domain:PDomain" href="model.domain#/"/>
+</notation:Diagram>

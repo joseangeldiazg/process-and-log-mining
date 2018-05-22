@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.0.1" xmlns="http://www.iactive.es/namespace/domain">
+  <Group Id="1" Name="Achernar" Ambition="HIGH"/>
+  <Group Id="2" Name="Bellatrix" Ambition="LOW"/>
+  <Group Id="3" Name="Cerastes"/>
+</xmi:XMI>

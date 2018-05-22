@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+
+<!-- Nodes types-->
+
+<xs:complexType name='StatisticsStat'>
+<xs:attribute name='currentTime' use='required' type='xs:string'/>
+<xs:attribute name='activitiesExpanded' use='required' type='xs:string'/>
+<xs:attribute name='conditions' use='required' type='xs:string'/>
+<xs:attribute name='methodsExpanded' use='required' type='xs:string'/>
+<xs:attribute name='backTrackings' use='required' type='xs:string'/>
+<xs:attribute name='nodesExplored' use='required' type='xs:string'/>
+<xs:attribute name='memoryInUse' use='required' type='xs:string'/>
+<xs:attribute name='conditionsCut' use='required' type='xs:string'/>
+<xs:attribute name='tasksCut' use='required' type='xs:string'/>
+<xs:attribute name='methodsCut' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='StatisticsData'>
+<xs:choice minOccurs='0' maxOccurs='unbounded'>
+<xs:element name='stat' type='StatisticsStat' minOccurs='0' maxOccurs='unbounded'/>
+</xs:choice>
+</xs:complexType>
+
+<xs:complexType name='StatisticsTimeMemoryConsumed'>
+<xs:attribute name='total' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='StatisticsTimePollingTime'>
+<xs:attribute name='time' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='StatisticsTimeElement'>
+<xs:attribute name='time' use='required' type='xs:string'/>
+<xs:attribute name='start' use='required' type='xs:string'/>
+<xs:attribute name='end' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='StatisticsTime'>
+<xs:choice minOccurs='0' maxOccurs='unbounded'>
+<xs:element name='planningTime' type='StatisticsTimeElement' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='compileTime' type='StatisticsTimeElement' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='loadTime' type='StatisticsTimeElement' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='pollingTime' type='StatisticsTimePollingTime' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='memoryConsumed' type='StatisticsTimeMemoryConsumed' minOccurs='0' maxOccurs='unbounded'/>
+</xs:choice>
+</xs:complexType>
+
+<xs:complexType name='Statistics'>
+<xs:choice minOccurs='0' maxOccurs='unbounded'>
+<xs:element name='time' type='StatisticsTime' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='data' type='StatisticsData' minOccurs='0' maxOccurs='unbounded'/>
+</xs:choice>
+</xs:complexType>
+
+<xs:complexType name='NodeDependency'>
+<xs:attribute name='target' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='NodeDependencies'>
+<xs:choice minOccurs='0' maxOccurs='unbounded'>
+<xs:element name='orderDependence' type='NodeDependency' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='inheritanceDependence' type='NodeDependency' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='causalDependence' type='NodeDependency' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='inferedCausalDependence' type='NodeDependency' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='inferedOrderDependence' type='NodeDependency' minOccurs='0' maxOccurs='unbounded'/>
+</xs:choice>
+</xs:complexType>
+
+<xs:complexType name='NodeActivityMetadata'>
+<xs:attribute name='type' use='required' type='xs:string'/>
+<xs:attribute name='name' use='required' type='xs:string'/>
+<xs:attribute name='value' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='NodeActivityActor'>
+<xs:choice minOccurs='1' maxOccurs='1'>
+<xs:element name='object' type='Object' minOccurs='1' maxOccurs='1'/>
+</xs:choice>
+</xs:complexType>
+
+<xs:complexType name='Data'>
+<xs:attribute name='type' use='required' type='xs:string'/>
+<xs:attribute name='content' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='Object'>
+<xs:attribute name='type' use='required' type='xs:string'/>
+<xs:attribute name='name' use='required' type='xs:string'/>
+<xs:attribute name='id' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='NodeActivityReference'>
+<xs:choice minOccurs='1' maxOccurs='1'>
+<xs:element name='data' type='Data' minOccurs='1' maxOccurs='1'/>
+<xs:element name='object' type='Object' minOccurs='1' maxOccurs='1'/>
+</xs:choice>
+</xs:complexType>
+
+<xs:complexType name='NodeActivity'>
+<xs:choice minOccurs='0' maxOccurs='unbounded'>
+<xs:element name='reference' type='NodeActivityReference' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='actor' type='NodeActivityActor' minOccurs='0' maxOccurs='unbounded'/>
+<xs:element name='metadata' type='NodeActivityMetadata' minOccurs='0' maxOccurs='unbounded'/>
+</xs:choice>
+<xs:attribute name='name' use='required' type='xs:string'/>
+<xs:attribute name='earliestStart' type='xs:string'/>
+<xs:attribute name='latestStart' type='xs:string'/>
+<xs:attribute name='earliestEnd' type='xs:string'/>
+<xs:attribute name='latestEnd' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='NodeTaskParameter'>
+<xs:attribute name='isActor' type='xs:string'/>
+<xs:attribute name='type' use='required' type='xs:string'/>
+<xs:attribute name='name' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='NodeTask'>
+<xs:choice minOccurs='0' maxOccurs='unbounded'>
+<xs:element name='parameter' type='NodeTaskParameter' minOccurs='0' maxOccurs='unbounded'/>
+</xs:choice>
+<xs:attribute name='name' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='Node'>
+<xs:choice minOccurs='0' maxOccurs='unbounded'>
+<xs:element name='task' type='NodeTask' minOccurs='1' maxOccurs='1'/>
+<xs:element name='activity' type='NodeActivity' minOccurs='1' maxOccurs='1'/>
+<xs:element name='dependencies' type='NodeDependencies' minOccurs='0' maxOccurs='1'/>
+</xs:choice>
+<xs:attribute name='id' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:complexType name='Process'>
+<xs:choice minOccurs='0' maxOccurs='unbounded'>
+<xs:element name='node' type='Node' minOccurs='1' maxOccurs='unbounded'/>
+<xs:element name='statistics' type='Statistics' minOccurs='0' maxOccurs='1'/>
+</xs:choice>
+<xs:attribute name='numberOfActivities' use='required' type='xs:string'/>
+</xs:complexType>
+
+<xs:element name='process' type='Process'/>
+
+</xs:schema>

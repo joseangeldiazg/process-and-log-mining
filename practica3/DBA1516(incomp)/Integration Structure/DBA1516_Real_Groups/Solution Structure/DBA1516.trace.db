@@ -1,0 +1,36 @@
+05-21 20:41:45 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180521204145'; [42102-154]
+05-21 20:41:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180521203549'; [42102-154]
+05-21 20:41:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180521203818'; [42102-154]
+05-21 20:41:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180521204145'; [42102-154]
+05-21 20:41:53 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180521203549'; [42102-154]
+05-21 20:41:55 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180521203549'; [42102-154]
+05-21 20:41:56 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180521203549'; [42102-154]
+05-21 20:41:59 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180521203818'; [42102-154]
+05-21 20:42:00 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180521204145'; [42102-154]
