@@ -8,10 +8,48 @@
 
 En este documento encontramos el trabajo teórico con los conceptos teóricos que sustentan el desarrollo práctico del tema 1 de la asignatura, concretamente el tema de \textbf{Process Mining}. Para su resolución se han seguido las transparencias del tema 1 de la asignatura \cite{1}.
 
-\section{Conceptos teóricos relacionados con la práctica}
+\section{Conceptos teóricos relacionados}
+
+La primera práctica de la asignatura es una práctica introductoria en la que se ven conceptos clave de la minería de procesos sin entrar muy en detalle en las matemáticas y algoritmos subyacentes, sino que versa en los conceptos teóricos a alto nivel que veremos a continuación.
+
+\subsection{Logs de eventos}
+
+Inicialmente en el tema de teoría tras introducir el tema vimos como los logs generalmente se representan en una tupla en el que cada una de las entradas representan casos que a la vez son secuencias de eventos o actividades. Se ha visto que estos pueden ser de diverso tipo, como por ejemplo representar las ventas y el ciclo de estas, tratamientos dados por médicos a pacientes etc. En última instancia un log será un determinado evento y vendrá identificado por un id del que posteriormente podremos agregar diversas actividades para diversos recursos en un determinado momento temporal, aunque también es sabido que esto puede complicarse. 
+
+En el caso de la práctica realizada tenemos entre manos logs de una compañía en la que diversas personas realizan acciones o eventos, por lo que el log formará una especie de transacciones con actividades y tiempo asociadas, además de personas que serían los recursos. 
+
+\subsection{Relación entre log y el modelo}
+
+En la teoría se vio que tenemos tres tipos de relaciones entre el log y el modelo, a saber:
+
+\begin{enumerate}
+	\item \textbf{Play out}: Donde el log es la salida de un modelo que podrá ser un modelo BPM.
+	\item \textbf{Play in}: Generamos un modelo a partir de un log. 
+	\item \textbf{Replay}: Tengo un log y un modelo de proceso y quiero analizar que ocurre con uno en función de otro para mejorar posibles cuellos de botella por ejemplo. 
+\end{enumerate}
+
+
+En el caso que nos incumbe estamos ante un problema \textbf{Play In} ya que vamos a generar un modelo para descubrir procesos a partir de un log, aunque también es verdad que el log que tenemos podría ser la salida de un modelo BPM por lo que podríamos tener también la salida de un modelo \textbf{Play Out}.
+
+\subsection{Representación de logs}
+
+Este es el punto en el que la teoría del primer tema de la asignatura mayor relación tiene con la primera práctica ya que donde más se ha jugado en esta practica ha sido con filtros y representación gráfica para descubrir procesos interesantes en nuestro log. En la figura \ref{ejemplo} podemos ver un ejemplo de un gráfico de procesos. 
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.36]{./Capitulo1/imagenes/grafico.png}
+	\caption{Ejemplo de gráfico de proceso.}
+	\label{ejemplo}
+\end{figure}
+
+Si atendemos a este gráfico y a lo visto en la teoría podríamos tener entre manos una representación basada en red de Petri, ya que hay eventos  y transiciones entre ellos, pero si analizamos más en detalle podemos concluir que estamos ante una \textbf{representación basada en heurísticas} y concretamente en gráficos de dependencias ya que podemos ver como entre cada uno de los eventos tenemos frecuencias, ademas de que estos representan sucesiones o posibles caminos.  
+
+
 
 \section{Conclusiones Finales}
 
+Tanto en la primera práctica como en el primer tema de teoría se ha ofrecido una gran introducción al concepto de minería de procesos y por medio de la representación gráfica hemos conseguido obtener información muy relevante a partir de datos bastante complejos de entender a simple vista como una sucesión de tuplas en una tabla. Queda constatada por tanto la potencia del software Disco para estas labores así como la necesidad y utilidad de la minería de procesos en organizaciones de mayor o menor calado donde por medio de estas tareas de análisis podrán mejorarse a muy seguro las labores desempeñadas.
 
 \clearpage
 %---------------------------------------------------
