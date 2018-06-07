@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<datasources version='1.99.6'>
+	<datasource type='XML'>
+		<xmlLocation relative='true'>localdata.localdata</xmlLocation>
+	</datasource>
+</datasources>

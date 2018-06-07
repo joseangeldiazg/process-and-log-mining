@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.0.1" xmlns="http://www.iactive.es/namespace/domain">
+  <Products Id="1" ProductName="Spoon" UnitPrice="1.0"/>
+  <Products Id="2" ProductName="Fork" UnitPrice="0.5"/>
+  <Sales Id="1" ProductID="1" Units="2" International="false" FinalPrice="0.0"/>
+  <Sales Id="2" ProductID="2" Units="100" International="true" FinalPrice="0.0"/>
+</xmi:XMI>

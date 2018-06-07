@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<domain:PDomain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:conditions="http://www.iactive.es/planner/model/domain/model/conditions" xmlns:domain="http://www.iactive.es/planner/model/domain" xmlns:effects="http://www.iactive.es/planner/model/domain/model/effects" xmlns:expressions="http://www.iactive.es/planner/model/domain/model/expressions" xmlns:protocols="http://www.iactive.es/planner/model/domain/model/protocols" xmlns:terms="http://www.iactive.es/planner/model/domain/model/terms" xmlns:time="http://www.iactive.es/planner/model/domain/time" xmlns:types="http://www.iactive.es/planner/model/core/instances/types" name="Business Process Pro" author="User" description="" language="English" version="1.99.6" userVersion="1.0" creation="2016-05-03T19:27:13.772+0200" isTimed="true" canUseTime="true" canUseParallelBranches="true">
+  <tasks name="ExtractSales" iterable="true" iterationType="parallel" main="true">
+    <decompositions xsi:type="protocols:PMethod" name="M1">
+      <variables name="fP" type="//@dataTypeFactory/@doubleDataType"/>
+      <condition xsi:type="conditions:PAssignationCondition" variable="//@tasks.0/@decompositions.0/@variables.0">
+        <expression xsi:type="expressions:PBinaryExpression" dataTypeFactory="//@dataTypeFactory">
+          <operandA xsi:type="expressions:PBinaryExpression" dataTypeFactory="//@dataTypeFactory" operator="*">
+            <operandA xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.0/@iterationContext/@variables.1"/>
+            <operandB xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.0/@iterationContext/@variables.5"/>
+          </operandA>
+          <operandB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+            <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="5"/>
+          </operandB>
+        </expression>
+      </condition>
+      <goals name="CalculatePrice1" task="//@tasks.1" rootNode="true">
+        <successors>1</successors>
+        <parameters variable="//@tasks.0/@iterationContext/@variables.2"/>
+      </goals>
+      <goals name="PrepareShipping1" collapsed="true" task="//@tasks.6">
+        <successors>2</successors>
+        <predecessors>0</predecessors>
+        <parameters variable="//@tasks.0/@iterationContext/@variables.2"/>
+      </goals>
+      <goals name="ProcessCustomsClearance1" collapsed="true" task="//@tasks.7">
+        <successors>3</successors>
+        <predecessors>1</predecessors>
+        <parameters variable="//@tasks.0/@iterationContext/@variables.2"/>
+      </goals>
+      <goals name="ProcessInvoice1" collapsed="true" task="//@tasks.8">
+        <predecessors>2</predecessors>
+        <parameters variable="//@tasks.0/@iterationContext/@variables.2"/>
+      </goals>
+    </decompositions>
+    <iterationContext iterationVariables="//@tasks.0/@iterationContext/@variables.2 //@tasks.0/@iterationContext/@variables.3 //@tasks.0/@iterationContext/@variables.4 //@tasks.0/@iterationContext/@variables.5 //@tasks.0/@iterationContext/@variables.6 //@tasks.0/@iterationContext/@variables.1 //@tasks.0/@iterationContext/@variables.0" scope="//@tasks.0" domain="/">
+      <variables name="p" type="//@classes.0"/>
+      <variables name="pU" type="//@dataTypeFactory/@doubleDataType"/>
+      <variables name="sID" type="//@dataTypeFactory/@integerDataType"/>
+      <variables name="sIntl" type="//@dataTypeFactory/@booleanDataType"/>
+      <variables name="sPID" type="//@dataTypeFactory/@integerDataType"/>
+      <variables name="sU" type="//@dataTypeFactory/@integerDataType"/>
+      <variables name="sales" type="//@classes.1"/>
+      <iterationCondition xsi:type="conditions:PConjunctiveCondition">
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.0">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.6"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.2"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.1">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.6"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.4"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.2">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.6"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.5"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.3">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.6"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.3"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.0" functor="//@classes.0/@properties.0">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.4"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.0" functor="//@classes.0/@properties.2">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.0/@iterationContext/@variables.1"/>
+        </conditions>
+      </iterationCondition>
+    </iterationContext>
+  </tasks>
+  <tasks name="CalculatePrice">
+    <variables name="salesID" type="//@dataTypeFactory/@integerDataType"/>
+    <decompositions xsi:type="protocols:PAction">
+      <variables name="s" type="//@classes.1"/>
+      <variables name="PID" type="//@dataTypeFactory/@integerDataType"/>
+      <variables name="U" type="//@dataTypeFactory/@integerDataType"/>
+      <variables name="old" type="//@dataTypeFactory/@doubleDataType"/>
+      <variables name="p" type="//@classes.0"/>
+      <variables name="pU" type="//@dataTypeFactory/@doubleDataType"/>
+      <variables name="final" type="//@dataTypeFactory/@doubleDataType"/>
+      <condition xsi:type="conditions:PConjunctiveCondition">
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.0">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@variables.0"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.1">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.1"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.2">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.2"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.4">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.3"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.0" functor="//@classes.0/@properties.0">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.4"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.1"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.0" functor="//@classes.0/@properties.2">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.4"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.5"/>
+        </conditions>
+      </condition>
+      <startVariable name="start" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <endVariable name="end" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <timeConstraint xsi:type="time:PSimpleTimeConstraint">
+        <expressionA dataTypeFactory="//@dataTypeFactory" variable="duration"/>
+        <expressionB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+          <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="1"/>
+        </expressionB>
+      </timeConstraint>
+      <effect xsi:type="effects:PConjunctiveEffect">
+        <effects xsi:type="effects:PAssignationEffect" variable="//@tasks.1/@decompositions.0/@variables.6">
+          <expression xsi:type="expressions:PBinaryExpression" dataTypeFactory="//@dataTypeFactory" operator="*">
+            <operandA xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.1/@decompositions.0/@variables.2"/>
+            <operandB xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.1/@decompositions.0/@variables.5"/>
+          </expression>
+        </effects>
+        <effects xsi:type="effects:PNegativeEffect">
+          <effect xsi:type="effects:PPredicateEffect" classType="//@classes.1" functor="//@classes.1/@properties.4">
+            <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.0"/>
+            <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.3"/>
+          </effect>
+        </effects>
+        <effects xsi:type="effects:PPredicateEffect" classType="//@classes.1" functor="//@classes.1/@properties.4">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.1/@decompositions.0/@variables.6"/>
+        </effects>
+      </effect>
+      <prettyPrint xsi:type="expressions:PConcatenatedStringExpression" dataTypeFactory="//@dataTypeFactory">
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content="Sale #"/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.1/@variables.0"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=": sold "/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.1/@decompositions.0/@variables.2"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=" units of "/>
+        </strings>
+        <strings xsi:type="expressions:PFluentExpression" dataTypeFactory="//@dataTypeFactory" classType="//@classes.0" property="//@classes.0/@properties.1" variable="//@tasks.1/@decompositions.0/@variables.4"/>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=" at "/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PFluentExpression" dataTypeFactory="//@dataTypeFactory" classType="//@classes.0" property="//@classes.0/@properties.2" variable="//@tasks.1/@decompositions.0/@variables.4"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=" each"/>
+        </strings>
+      </prettyPrint>
+    </decompositions>
+  </tasks>
+  <tasks name="DeliverInvoice">
+    <variables name="salesID" type="//@dataTypeFactory/@integerDataType"/>
+    <variables name="finalPrice" type="//@dataTypeFactory/@doubleDataType"/>
+    <decompositions xsi:type="protocols:PAction">
+      <startVariable name="start" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <endVariable name="end" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <timeConstraint xsi:type="time:PSimpleTimeConstraint">
+        <expressionA dataTypeFactory="//@dataTypeFactory" variable="duration"/>
+        <expressionB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+          <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="1"/>
+        </expressionB>
+      </timeConstraint>
+      <prettyPrint xsi:type="expressions:PConcatenatedStringExpression" dataTypeFactory="//@dataTypeFactory">
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content="Sale #"/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.2/@variables.0"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=": final invoice amounts to "/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.2/@variables.1"/>
+        </strings>
+      </prettyPrint>
+    </decompositions>
+  </tasks>
+  <tasks name="LargeShipping">
+    <variables name="salesID" type="//@dataTypeFactory/@integerDataType"/>
+    <decompositions xsi:type="protocols:PAction">
+      <startVariable name="start" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <endVariable name="end" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <timeConstraint xsi:type="time:PSimpleTimeConstraint">
+        <expressionA dataTypeFactory="//@dataTypeFactory" variable="duration"/>
+        <expressionB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+          <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="1"/>
+        </expressionB>
+      </timeConstraint>
+      <prettyPrint xsi:type="expressions:PConcatenatedStringExpression" dataTypeFactory="//@dataTypeFactory">
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content="Sale #"/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.3/@variables.0"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=": providing large packaging"/>
+        </strings>
+      </prettyPrint>
+    </decompositions>
+  </tasks>
+  <tasks name="RegularShipping">
+    <variables name="salesID" type="//@dataTypeFactory/@integerDataType"/>
+    <decompositions xsi:type="protocols:PAction">
+      <startVariable name="start" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <endVariable name="end" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <timeConstraint xsi:type="time:PSimpleTimeConstraint">
+        <expressionA dataTypeFactory="//@dataTypeFactory" variable="duration"/>
+        <expressionB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+          <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="1"/>
+        </expressionB>
+      </timeConstraint>
+      <prettyPrint xsi:type="expressions:PConcatenatedStringExpression" dataTypeFactory="//@dataTypeFactory">
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content="Sale #"/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.4/@variables.0"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=": providing small packaging"/>
+        </strings>
+      </prettyPrint>
+    </decompositions>
+  </tasks>
+  <tasks name="RequestCustomsClearance">
+    <variables name="salesID" type="//@dataTypeFactory/@integerDataType"/>
+    <decompositions xsi:type="protocols:PAction">
+      <startVariable name="start" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <endVariable name="end" type="//@dataTypeFactory/@timeReferenceDataType"/>
+      <timeConstraint xsi:type="time:PSimpleTimeConstraint">
+        <expressionA dataTypeFactory="//@dataTypeFactory" variable="duration"/>
+        <expressionB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+          <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="1"/>
+        </expressionB>
+      </timeConstraint>
+      <prettyPrint xsi:type="expressions:PConcatenatedStringExpression" dataTypeFactory="//@dataTypeFactory">
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content="Sale #"/>
+        </strings>
+        <strings xsi:type="expressions:PUnaryExpression" dataTypeFactory="//@dataTypeFactory" operator="str">
+          <operand xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.5/@variables.0"/>
+        </strings>
+        <strings xsi:type="expressions:PStringExpression" dataTypeFactory="//@dataTypeFactory">
+          <string type="//@dataTypeFactory/@stringDataType" content=": requesting Customs clearance"/>
+        </strings>
+      </prettyPrint>
+    </decompositions>
+  </tasks>
+  <tasks name="PrepareShipping">
+    <variables name="salesID" type="//@dataTypeFactory/@integerDataType"/>
+    <decompositions xsi:type="protocols:PMethod" name="Large">
+      <variables name="sales" type="//@classes.1"/>
+      <variables name="sU" type="//@dataTypeFactory/@integerDataType"/>
+      <condition xsi:type="conditions:PConjunctiveCondition">
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.0">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.6/@decompositions.0/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.6/@variables.0"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.2">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.6/@decompositions.0/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.6/@decompositions.0/@variables.1"/>
+        </conditions>
+        <conditions xsi:type="conditions:PComparativeCondition" comparator=">">
+          <operandA xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.6/@decompositions.0/@variables.1"/>
+          <operandB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+            <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="2"/>
+          </operandB>
+        </conditions>
+      </condition>
+      <goals name="LargeShipping1" task="//@tasks.3" rootNode="true">
+        <parameters variable="//@tasks.6/@variables.0"/>
+      </goals>
+    </decompositions>
+    <decompositions xsi:type="protocols:PMethod" name="Small">
+      <goals name="RegularShipping1" task="//@tasks.4" rootNode="true">
+        <parameters variable="//@tasks.6/@variables.0"/>
+      </goals>
+    </decompositions>
+  </tasks>
+  <tasks name="ProcessCustomsClearance">
+    <variables name="salesID" type="//@dataTypeFactory/@integerDataType"/>
+    <decompositions xsi:type="protocols:PMethod" name="Clearance">
+      <variables name="sales" type="//@classes.1"/>
+      <condition xsi:type="conditions:PConjunctiveCondition">
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.0">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.7/@decompositions.0/@variables.0"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.7/@variables.0"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.3">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.7/@decompositions.0/@variables.0"/>
+          <terms xsi:type="terms:PLiteralTerm">
+            <literal xsi:type="types:PBoolean" type="//@dataTypeFactory/@booleanDataType" content="true"/>
+          </terms>
+        </conditions>
+      </condition>
+      <goals name="RequestCustomsClearance1" task="//@tasks.5" rootNode="true">
+        <parameters variable="//@tasks.7/@variables.0"/>
+      </goals>
+    </decompositions>
+    <decompositions xsi:type="protocols:PMethod" name="NoClearance"/>
+  </tasks>
+  <tasks name="ProcessInvoice">
+    <variables name="salesID" type="//@dataTypeFactory/@integerDataType"/>
+    <decompositions xsi:type="protocols:PMethod" name="Free">
+      <variables name="fP" type="//@dataTypeFactory/@doubleDataType"/>
+      <variables name="sales" type="//@classes.1"/>
+      <variables name="sID" type="//@dataTypeFactory/@integerDataType"/>
+      <condition xsi:type="conditions:PConjunctiveCondition">
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.0">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.8/@decompositions.0/@variables.1"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.8/@decompositions.0/@variables.2"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.4">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.8/@decompositions.0/@variables.1"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.8/@decompositions.0/@variables.0"/>
+        </conditions>
+        <conditions xsi:type="conditions:PComparativeCondition" comparator=">">
+          <operandA xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.8/@decompositions.0/@variables.0"/>
+          <operandB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+            <number xsi:type="types:PDouble" type="//@dataTypeFactory/@doubleDataType" content="20.0"/>
+          </operandB>
+        </conditions>
+      </condition>
+      <goals name="DeliverInvoice1" task="//@tasks.2" rootNode="true">
+        <parameters variable="//@tasks.8/@variables.0"/>
+        <parameters variable="//@tasks.8/@decompositions.0/@variables.0"/>
+      </goals>
+    </decompositions>
+    <decompositions xsi:type="protocols:PMethod" name="Regular">
+      <variables name="fPS" type="//@dataTypeFactory/@doubleDataType"/>
+      <variables name="sales" type="//@classes.1"/>
+      <variables name="sID" type="//@dataTypeFactory/@integerDataType"/>
+      <variables name="fP" type="//@dataTypeFactory/@doubleDataType"/>
+      <condition xsi:type="conditions:PConjunctiveCondition">
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.0">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.8/@decompositions.1/@variables.1"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.8/@decompositions.1/@variables.2"/>
+        </conditions>
+        <conditions xsi:type="conditions:PPredicateCondition" classType="//@classes.1" functor="//@classes.1/@properties.4">
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.8/@decompositions.1/@variables.1"/>
+          <terms xsi:type="terms:PVariableTerm" variable="//@tasks.8/@decompositions.1/@variables.3"/>
+        </conditions>
+        <conditions xsi:type="conditions:PComparativeCondition" comparator="&lt;=">
+          <operandA xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.8/@decompositions.1/@variables.3"/>
+          <operandB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+            <number xsi:type="types:PDouble" type="//@dataTypeFactory/@doubleDataType" content="20.0"/>
+          </operandB>
+        </conditions>
+        <conditions xsi:type="conditions:PAssignationCondition" variable="//@tasks.8/@decompositions.1/@variables.0">
+          <expression xsi:type="expressions:PBinaryExpression" dataTypeFactory="//@dataTypeFactory">
+            <operandA xsi:type="expressions:PVariableExpression" dataTypeFactory="//@dataTypeFactory" variable="//@tasks.8/@decompositions.1/@variables.3"/>
+            <operandB xsi:type="expressions:PNumberExpression" dataTypeFactory="//@dataTypeFactory">
+              <number xsi:type="types:PInteger" type="//@dataTypeFactory/@integerDataType" content="5"/>
+            </operandB>
+          </expression>
+        </conditions>
+      </condition>
+      <goals name="DeliverInvoice1" task="//@tasks.2" rootNode="true">
+        <parameters variable="//@tasks.8/@variables.0"/>
+        <parameters variable="//@tasks.8/@decompositions.1/@variables.0"/>
+      </goals>
+    </decompositions>
+  </tasks>
+  <classes name="Products" domain="/" primaryKey="//@classes.0/@properties.0">
+    <metaTags name="__prettyPrint" type="//@dataTypeFactory/@stringDataType" context="//@classes.0"/>
+    <properties name="Id" type="//@dataTypeFactory/@integerDataType" classType="//@classes.0" lowerBound="1" upperBound="-2" autoIncrement="true"/>
+    <properties name="ProductName" type="//@dataTypeFactory/@stringDataType" classType="//@classes.0" lowerBound="1" upperBound="-2"/>
+    <properties name="UnitPrice" type="//@dataTypeFactory/@doubleDataType" classType="//@classes.0" lowerBound="1" upperBound="-2"/>
+    <thisVar name="this" type="//@classes.0"/>
+  </classes>
+  <classes name="Sales" domain="/" primaryKey="//@classes.1/@properties.0">
+    <metaTags name="__prettyPrint" type="//@dataTypeFactory/@stringDataType" context="//@classes.1"/>
+    <properties name="Id" type="//@dataTypeFactory/@integerDataType" classType="//@classes.1" lowerBound="1" upperBound="-2" autoIncrement="true"/>
+    <properties name="ProductID" type="//@dataTypeFactory/@integerDataType" classType="//@classes.1" lowerBound="1" upperBound="-2"/>
+    <properties name="Units" type="//@dataTypeFactory/@integerDataType" classType="//@classes.1" lowerBound="1" upperBound="-2"/>
+    <properties name="International" type="//@dataTypeFactory/@booleanDataType" classType="//@classes.1" lowerBound="1" upperBound="-2"/>
+    <properties name="FinalPrice" type="//@dataTypeFactory/@doubleDataType" classType="//@classes.1" lowerBound="1" upperBound="-2"/>
+    <thisVar name="this" type="//@classes.1"/>
+  </classes>
+  <dataTypeFactory defaultTimeUnit="HOUR">
+    <objectDataType name="Object" typeID="POBJECT"/>
+    <booleanDataType name="Boolean" typeID="PBOOLEAN"/>
+    <integerDataType name="Integer" typeID="PINTEGER" canBePrimaryKey="true"/>
+    <timeDeltaDataType name="TimeDelta" typeID="PTIMEDELTA"/>
+    <numberDataType name="Number" typeID="PNUMBER" canBePrimaryKey="true"/>
+    <floatDataType name="Float" typeID="PFLOAT" canBePrimaryKey="true"/>
+    <doubleDataType name="Double" typeID="PDOUBLE" canBePrimaryKey="true"/>
+    <dateTimeDataType name="DateTime" typeID="PDATETIME"/>
+    <stringDataType name="String" typeID="PSTRING" canBePrimaryKey="true"/>
+    <dateTimeSetDataType name="DateTimeSet" typeID="PDATETIMESET"/>
+    <timeReferenceDataType name="TimeReference" typeID="PTIMEREFERENCE"/>
+    <nullDataType name="Null"/>
+    <trueValue type="//@dataTypeFactory/@booleanDataType" content="true"/>
+    <falseValue type="//@dataTypeFactory/@booleanDataType"/>
+    <nullValue type="//@dataTypeFactory/@nullDataType"/>
+    <nullVariable name="Null" type="//@dataTypeFactory/@nullDataType"/>
+  </dataTypeFactory>
+  <libraryManager/>
+</domain:PDomain>

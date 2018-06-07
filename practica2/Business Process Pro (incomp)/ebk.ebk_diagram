@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:protocols="http://www.iactive.es/planner/model/domain/model/protocols" xsi:schemaLocation="http://www.iactive.es/planner/model/domain/model/protocols http://www.iactive.es/planner/model/domain#//protocols">
+  <notation:Diagram xmi:id="_RoeDcRFUEeaIH9aT22vkDA" type="es.iactive.studio.ebk.diagram" name="ExtractSales" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_RoeDchFUEeaIH9aT22vkDA" type="12003">
+      <children xmi:type="notation:Node" xmi:id="_RoeDcxFUEeaIH9aT22vkDA" type="15002"/>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_RoeDdBFUEeaIH9aT22vkDA" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RoeDdRFUEeaIH9aT22vkDA" x="250" y="5"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_RoeDdhFUEeaIH9aT22vkDA"/>
+    <element xmi:type="protocols:PTask" href="model.domain#//@tasks.0"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_tA3igBFVEeaIH9aT22vkDA" type="es.iactive.studio.ebk.diagram" name="Goal1" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_tA3igRFVEeaIH9aT22vkDA" type="12003">
+      <children xmi:type="notation:Node" xmi:id="_tA3ighFVEeaIH9aT22vkDA" type="15002"/>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_tA3igxFVEeaIH9aT22vkDA" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tA3ihBFVEeaIH9aT22vkDA" x="250" y="5"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_tA3ihRFVEeaIH9aT22vkDA"/>
+    <element xmi:type="protocols:PTask" href="model.domain#//@tasks.6"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_wvg-gBFVEeaIH9aT22vkDA" type="es.iactive.studio.ebk.diagram" name="Goal1" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_wvg-gRFVEeaIH9aT22vkDA" type="12003">
+      <children xmi:type="notation:Node" xmi:id="_wvg-ghFVEeaIH9aT22vkDA" type="15002"/>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_wvg-gxFVEeaIH9aT22vkDA" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wvg-hBFVEeaIH9aT22vkDA" x="250" y="5"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_wvg-hRFVEeaIH9aT22vkDA"/>
+    <element xmi:type="protocols:PTask" href="model.domain#//@tasks.7"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_0XfKwBFVEeaIH9aT22vkDA" type="es.iactive.studio.ebk.diagram" name="Goal1" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_0XfKwRFVEeaIH9aT22vkDA" type="12003">
+      <children xmi:type="notation:Node" xmi:id="_0XfKwhFVEeaIH9aT22vkDA" type="15002"/>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_0XfKwxFVEeaIH9aT22vkDA" fontName="Segoe UI"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0XfKxBFVEeaIH9aT22vkDA" x="250" y="5"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_0XfKxRFVEeaIH9aT22vkDA"/>
+    <element xmi:type="protocols:PTask" href="model.domain#//@tasks.8"/>
+  </notation:Diagram>
+</xmi:XMI>

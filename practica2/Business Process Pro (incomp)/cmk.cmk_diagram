@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:concepts="http://www.iactive.es/planner/model/domain/model/concepts" xmlns:domain="http://www.iactive.es/planner/model/domain" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xsi:schemaLocation="http://www.iactive.es/planner/model/domain/model/concepts http://www.iactive.es/planner/model/domain#//concepts" xmi:id="_RonNYBFUEeaIH9aT22vkDA" type="es.iactive.planner.model.domain" name="cmk.cmk_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_THmT4BFUEeaIH9aT22vkDA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_THmT4xFUEeaIH9aT22vkDA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_THwE4BFUEeaIH9aT22vkDA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_TIMw0BFUEeaIH9aT22vkDA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.0/@properties.0"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_TIMw0RFUEeaIH9aT22vkDA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_aZPVgBFUEeaIH9aT22vkDA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.0/@properties.1"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_aZPVgRFUEeaIH9aT22vkDA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_dV_agBFUEeaIH9aT22vkDA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.0/@properties.2"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_dV_agRFUEeaIH9aT22vkDA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_THwE4RFUEeaIH9aT22vkDA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_THwE4hFUEeaIH9aT22vkDA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_THwE4xFUEeaIH9aT22vkDA" type="5002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_THwE5BFUEeaIH9aT22vkDA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_THwE5RFUEeaIH9aT22vkDA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_THmT4RFUEeaIH9aT22vkDA" fontName="Segoe UI"/>
+    <element xmi:type="concepts:PClassType" href="model.domain#//@classes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_THmT4hFUEeaIH9aT22vkDA" x="27" y="53"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_f5mmwBFUEeaIH9aT22vkDA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_f5mmwxFUEeaIH9aT22vkDA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_f5mmxBFUEeaIH9aT22vkDA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_f5mmyhFUEeaIH9aT22vkDA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.1/@properties.0"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_f5mmyxFUEeaIH9aT22vkDA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_g_OLABFUEeaIH9aT22vkDA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.1/@properties.1"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_g_OLARFUEeaIH9aT22vkDA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ne3H8BFUEeaIH9aT22vkDA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.1/@properties.2"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ne3H8RFUEeaIH9aT22vkDA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_pqU58BFUEeaIH9aT22vkDA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.1/@properties.3"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_pqU58RFUEeaIH9aT22vkDA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_tbs50BFUEeaIH9aT22vkDA" type="2001">
+        <element xmi:type="concepts:PProperty" href="model.domain#//@classes.1/@properties.4"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tbs50RFUEeaIH9aT22vkDA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_f5mmxRFUEeaIH9aT22vkDA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_f5mmxhFUEeaIH9aT22vkDA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_f5mmxxFUEeaIH9aT22vkDA" type="5002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_f5mmyBFUEeaIH9aT22vkDA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_f5mmyRFUEeaIH9aT22vkDA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_f5mmwRFUEeaIH9aT22vkDA" fontName="Segoe UI"/>
+    <element xmi:type="concepts:PClassType" href="model.domain#//@classes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f5mmwhFUEeaIH9aT22vkDA" x="243" y="53" width="208"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_RonNYRFUEeaIH9aT22vkDA"/>
+  <element xmi:type="domain:PDomain" href="model.domain#/"/>
+</notation:Diagram>

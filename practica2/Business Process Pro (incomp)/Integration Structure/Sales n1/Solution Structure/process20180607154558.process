@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process:PProcess xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dependencies="http://www.iactive.es/process/model/process/dependencies" xmlns:process="http://www.iactive.es/process/model" xmlns:types="http://www.iactive.es/process/model/process/types" generatedAt="2018-06-07T15:45:58.218+0200" trueValue="//@data.41" falseValue="//@data.42" numTimePoint="34">
+  <types xsi:type="types:PDataTypeType" name="Integer"/>
+  <types xsi:type="types:PClassType" name="Sales">
+    <attributes name="Id" type="//@types.0" lowerBound="1" upperBound="-2"/>
+    <attributes name="ProductID" type="//@types.0" lowerBound="1" upperBound="-2"/>
+    <attributes name="Units" type="//@types.0" lowerBound="1" upperBound="-2"/>
+    <attributes name="International" type="//@types.2" lowerBound="1" upperBound="-2"/>
+    <attributes name="FinalPrice" type="//@types.3" lowerBound="1" upperBound="-2"/>
+  </types>
+  <types xsi:type="types:PDataTypeType" name="Boolean"/>
+  <types xsi:type="types:PDataTypeType" name="Double"/>
+  <types xsi:type="types:PClassType" name="Products">
+    <attributes name="Id" type="//@types.0" lowerBound="1" upperBound="-2"/>
+    <attributes name="ProductName" type="//@types.5" lowerBound="1" upperBound="-2"/>
+    <attributes name="UnitPrice" type="//@types.3" lowerBound="1" upperBound="-2"/>
+  </types>
+  <types xsi:type="types:PDataTypeType" name="String"/>
+  <types xsi:type="types:PDataTypeType" name="TimeReference"/>
+  <objects type="//@types.1" name="Sales@1">
+    <id xsi:type="types:PInteger" type="//@types.0" id="1" value="1"/>
+  </objects>
+  <objects type="//@types.4" name="Products@1" index="1">
+    <id xsi:type="types:PInteger" type="//@types.0" id="4" value="1"/>
+  </objects>
+  <objects type="//@types.1" name="Sales@2" index="2">
+    <id xsi:type="types:PInteger" type="//@types.0" id="19" value="2"/>
+  </objects>
+  <objects type="//@types.4" name="Products@2" index="3">
+    <id xsi:type="types:PInteger" type="//@types.0" id="22" value="2"/>
+  </objects>
+  <data xsi:type="types:PInteger" type="//@types.0" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="1" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="2" value="2"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="3"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="4" value="1.0"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="5" value="2.0"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="6" value="8"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="7" value="9"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="8" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="9" value="1"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="10" value="16"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="11" value="17"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="12" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="13" value="1"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="14" value="7.0"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="15" value="18"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="16" value="19"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="17" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="18" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="19" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="20" value="100"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="21"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="22" value="0.5"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="23" value="50.0"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="24" value="20"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="25" value="21"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="26" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="27" value="2"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="28" value="28"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="29" value="29"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="30" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="31" value="2"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="32" value="30"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="33" value="31"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="34" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="35" value="2"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="36" value="50.0"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="37" value="32"/>
+  <data xsi:type="types:PTimeReference" type="//@types.6" id="38" value="33"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="39" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="40" value="1"/>
+  <data xsi:type="types:PBoolean" type="//@types.2" id="41" value="true"/>
+  <data xsi:type="types:PBoolean" type="//@types.2" id="42"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="43" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="44" value="2"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="45" value="1.0"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="46" value="7.0"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="47" value="5"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="48" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="49" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="50" value="1"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="51" value="7.0"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="52" value="1"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="53" value="2.0"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="54" value="20.0"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="55" value="5"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="56" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="57" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="58" value="100"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="59" value="0.5"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="60" value="55.0"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="61" value="5"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="62" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="63" value="100"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="64" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="65" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="66" value="2"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="67" value="50.0"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="68" value="2"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="69" value="20.0"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="70" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="71" value="1"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="72" value="2"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="73"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="74" value="1"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="75" value="1.0"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="76" value="1"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="77" value="2.0"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="78" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="79" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="80" value="100"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="81"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="82" value="2"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="83" value="0.5"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="84" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="85" value="100"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="86" value="2"/>
+  <data xsi:type="types:PInteger" type="//@types.0" id="87" value="2"/>
+  <data xsi:type="types:PDouble" type="//@types.3" id="88" value="50.0"/>
+  <activities mName="CalculatePrice" description="Sale #1: sold 2 units of Spoon at 1.0 each" parameters="//@activities.0/@locals.0" parent="//@decompositions.0" verboseName="Sale #1: sold 2 units of Spoon at 1.0 each" startTimePointIndex="8" endTimePointIndex="9">
+    <locals mName="salesID" value="//@data.0"/>
+    <locals mName="s" value="//@objects.0"/>
+    <locals mName="PID" value="//@data.1"/>
+    <locals mName="U" value="//@data.2"/>
+    <locals mName="old" value="//@data.3"/>
+    <locals mName="p" value="//@objects.1"/>
+    <locals mName="pU" value="//@data.4"/>
+    <locals mName="final" value="//@data.5"/>
+    <locals mName="start" value="//@data.6"/>
+    <locals mName="end" value="//@data.7"/>
+    <locals value="//@data.8"/>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.0" value="//@data.70">
+      <on className="Sales" attributeName="Id">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="70" value="1"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.0" value="//@data.71">
+      <on className="Sales" attributeName="ProductID">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="71" value="1"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.0" value="//@data.72">
+      <on className="Sales" attributeName="Units">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="72" value="1"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.0" value="//@data.73">
+      <on className="Sales" attributeName="FinalPrice">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="73" value="1"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.0" value="//@data.74">
+      <on className="Products" attributeName="Id">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="74" value="1"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.0" value="//@data.75">
+      <on className="Products" attributeName="UnitPrice">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="75" value="1"/>
+      </on>
+    </dependencies>
+    <mTimeWindow mEarliestStart="2016-05-03T19:54:32.000+0200" mEarliestEnd="2016-05-03T20:54:32.000+0200" mLatestStart="2017-05-03T16:54:32.000+0200" mLatestEnd="2017-05-03T17:54:32.000+0200"/>
+  </activities>
+  <activities mId="1" mName="RegularShipping" description="Sale #1: providing small packaging" parameters="//@activities.1/@locals.0" parent="//@decompositions.1" verboseName="Sale #1: providing small packaging" startTimePointIndex="16" endTimePointIndex="17">
+    <locals mName="salesID" value="//@data.9"/>
+    <locals mName="start" value="//@data.10"/>
+    <locals mName="end" value="//@data.11"/>
+    <locals value="//@data.12"/>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@activities.0" to="//@activities.1"/>
+    <mTimeWindow mEarliestStart="2016-05-03T20:54:32.000+0200" mEarliestEnd="2016-05-03T21:54:32.000+0200" mLatestStart="2017-05-03T17:54:32.000+0200" mLatestEnd="2017-05-03T18:54:32.000+0200"/>
+  </activities>
+  <activities mId="2" mName="DeliverInvoice" description="Sale #1: final invoice amounts to 7.0" parameters="//@activities.2/@locals.0 //@activities.2/@locals.1" parent="//@decompositions.3" verboseName="Sale #1: final invoice amounts to 7.0" startTimePointIndex="18" endTimePointIndex="19">
+    <locals mName="salesID" value="//@data.13"/>
+    <locals mName="finalPrice" value="//@data.14"/>
+    <locals mName="start" value="//@data.15"/>
+    <locals mName="end" value="//@data.16"/>
+    <locals value="//@data.17"/>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@decompositions.2" to="//@activities.2"/>
+    <mTimeWindow mEarliestStart="2016-05-03T21:54:32.000+0200" mEarliestEnd="2016-05-03T22:54:32.000+0200" mLatestStart="2017-05-03T18:54:32.000+0200" mLatestEnd="2017-05-03T19:54:32.000+0200"/>
+  </activities>
+  <activities mId="3" mName="CalculatePrice" description="Sale #2: sold 100 units of Fork at 0.5 each" parameters="//@activities.3/@locals.0" parent="//@decompositions.4" verboseName="Sale #2: sold 100 units of Fork at 0.5 each" startTimePointIndex="20" endTimePointIndex="21">
+    <locals mName="salesID" value="//@data.18"/>
+    <locals mName="s" value="//@objects.2"/>
+    <locals mName="PID" value="//@data.19"/>
+    <locals mName="U" value="//@data.20"/>
+    <locals mName="old" value="//@data.21"/>
+    <locals mName="p" value="//@objects.3"/>
+    <locals mName="pU" value="//@data.22"/>
+    <locals mName="final" value="//@data.23"/>
+    <locals mName="start" value="//@data.24"/>
+    <locals mName="end" value="//@data.25"/>
+    <locals value="//@data.26"/>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.3" value="//@data.78">
+      <on className="Sales" attributeName="Id">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="78" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.3" value="//@data.79">
+      <on className="Sales" attributeName="ProductID">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="79" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.3" value="//@data.80">
+      <on className="Sales" attributeName="Units">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="80" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.3" value="//@data.81">
+      <on className="Sales" attributeName="FinalPrice">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="81" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.3" value="//@data.82">
+      <on className="Products" attributeName="Id">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="82" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@activities.3" value="//@data.83">
+      <on className="Products" attributeName="UnitPrice">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="83" value="2"/>
+      </on>
+    </dependencies>
+    <mTimeWindow mEarliestStart="2016-05-03T19:54:32.000+0200" mEarliestEnd="2016-05-03T20:54:32.000+0200" mLatestStart="2017-05-03T15:54:32.000+0200" mLatestEnd="2017-05-03T16:54:32.000+0200"/>
+  </activities>
+  <activities mId="4" mName="LargeShipping" description="Sale #2: providing large packaging" parameters="//@activities.4/@locals.0" parent="//@decompositions.5" verboseName="Sale #2: providing large packaging" startTimePointIndex="28" endTimePointIndex="29">
+    <locals mName="salesID" value="//@data.27"/>
+    <locals mName="start" value="//@data.28"/>
+    <locals mName="end" value="//@data.29"/>
+    <locals value="//@data.30"/>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@activities.3" to="//@activities.4"/>
+    <mTimeWindow mEarliestStart="2016-05-03T20:54:32.000+0200" mEarliestEnd="2016-05-03T21:54:32.000+0200" mLatestStart="2017-05-03T16:54:32.000+0200" mLatestEnd="2017-05-03T17:54:32.000+0200"/>
+  </activities>
+  <activities mId="5" mName="RequestCustomsClearance" description="Sale #2: requesting Customs clearance" parameters="//@activities.5/@locals.0" parent="//@decompositions.6" verboseName="Sale #2: requesting Customs clearance" startTimePointIndex="30" endTimePointIndex="31">
+    <locals mName="salesID" value="//@data.31"/>
+    <locals mName="start" value="//@data.32"/>
+    <locals mName="end" value="//@data.33"/>
+    <locals value="//@data.34"/>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@decompositions.5" to="//@activities.5"/>
+    <mTimeWindow mEarliestStart="2016-05-03T21:54:32.000+0200" mEarliestEnd="2016-05-03T22:54:32.000+0200" mLatestStart="2017-05-03T17:54:32.000+0200" mLatestEnd="2017-05-03T18:54:32.000+0200"/>
+  </activities>
+  <activities mId="6" mName="DeliverInvoice" description="Sale #2: final invoice amounts to 50.0" parameters="//@activities.6/@locals.0 //@activities.6/@locals.1" parent="//@decompositions.7" verboseName="Sale #2: final invoice amounts to 50.0" startTimePointIndex="32" endTimePointIndex="33">
+    <locals mName="salesID" value="//@data.35"/>
+    <locals mName="finalPrice" value="//@data.36"/>
+    <locals mName="start" value="//@data.37"/>
+    <locals mName="end" value="//@data.38"/>
+    <locals value="//@data.39"/>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@decompositions.6" to="//@activities.6"/>
+    <mTimeWindow mEarliestStart="2016-05-03T22:54:32.000+0200" mEarliestEnd="2016-05-03T23:54:32.000+0200" mLatestStart="2017-05-03T18:54:32.000+0200" mLatestEnd="2017-05-03T19:54:32.000+0200"/>
+  </activities>
+  <decompositions mId="8" mName="M1" description="(Method: M1 - (ExtractSales))" type="method">
+    <locals mName="sID" value="//@data.40"/>
+    <locals mName="sIntl" value="//@data.42"/>
+    <locals mName="sPID" value="//@data.43"/>
+    <locals mName="sU" value="//@data.44"/>
+    <locals mName="sales" value="//@objects.0"/>
+    <locals mName="pU" value="//@data.45"/>
+    <locals mName="p" value="//@objects.1"/>
+    <locals mName="fP" value="//@data.46"/>
+    <locals value="//@data.47"/>
+  </decompositions>
+  <decompositions mId="9" mName="Small" description="(Method: Small - (PrepareShipping ?salesID:Integer))" parameters="//@decompositions.1/@locals.0" type="method" parent="//@decompositions.0">
+    <locals mName="salesID" value="//@data.48"/>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@activities.0" to="//@decompositions.1"/>
+  </decompositions>
+  <decompositions mId="10" mName="NoClearance" description="(Method: NoClearance - (ProcessCustomsClearance ?salesID:Integer))" parameters="//@decompositions.2/@locals.0" type="method" parent="//@decompositions.0">
+    <locals mName="salesID" value="//@data.49"/>
+  </decompositions>
+  <decompositions mId="11" mName="Regular" description="(Method: Regular - (ProcessInvoice ?salesID:Integer))" parameters="//@decompositions.3/@locals.0" type="method" parent="//@decompositions.0">
+    <locals mName="salesID" value="//@data.50"/>
+    <locals mName="fPS" value="//@data.51"/>
+    <locals mName="sales" value="//@objects.0"/>
+    <locals mName="sID" value="//@data.52"/>
+    <locals mName="fP" value="//@data.53"/>
+    <locals value="//@data.54"/>
+    <locals value="//@data.55"/>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@decompositions.3" value="//@data.76">
+      <on className="Sales" attributeName="Id">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="76" value="1"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" from="//@activities.0" to="//@decompositions.3" value="//@data.77">
+      <on className="Sales" attributeName="FinalPrice">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="77" value="1"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@decompositions.2" to="//@decompositions.3"/>
+  </decompositions>
+  <decompositions mId="12" mName="M1" description="(Method: M1 - (ExtractSales))" type="method">
+    <locals mName="sID" value="//@data.56"/>
+    <locals mName="sIntl" value="//@data.41"/>
+    <locals mName="sPID" value="//@data.57"/>
+    <locals mName="sU" value="//@data.58"/>
+    <locals mName="sales" value="//@objects.2"/>
+    <locals mName="pU" value="//@data.59"/>
+    <locals mName="p" value="//@objects.3"/>
+    <locals mName="fP" value="//@data.60"/>
+    <locals value="//@data.61"/>
+  </decompositions>
+  <decompositions mId="13" mName="Large" description="(Method: Large - (PrepareShipping ?salesID:Integer))" parameters="//@decompositions.5/@locals.0" type="method" parent="//@decompositions.4">
+    <locals mName="salesID" value="//@data.62"/>
+    <locals mName="sales" value="//@objects.2"/>
+    <locals mName="sU" value="//@data.63"/>
+    <locals value="//@data.64"/>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@decompositions.5" value="//@data.84">
+      <on className="Sales" attributeName="Id">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="84" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@decompositions.5" value="//@data.85">
+      <on className="Sales" attributeName="Units">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="85" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@activities.3" to="//@decompositions.5"/>
+  </decompositions>
+  <decompositions mId="14" mName="Clearance" description="(Method: Clearance - (ProcessCustomsClearance ?salesID:Integer))" parameters="//@decompositions.6/@locals.0" type="method" parent="//@decompositions.4">
+    <locals mName="salesID" value="//@data.65"/>
+    <locals mName="sales" value="//@objects.2"/>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@decompositions.6" value="//@data.86">
+      <on className="Sales" attributeName="Id">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="86" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@decompositions.6" value="//@data.41">
+      <on className="Sales" attributeName="International">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="87" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@decompositions.5" to="//@decompositions.6"/>
+  </decompositions>
+  <decompositions mId="15" mName="Free" description="(Method: Free - (ProcessInvoice ?salesID:Integer))" parameters="//@decompositions.7/@locals.0" type="method" parent="//@decompositions.4">
+    <locals mName="salesID" value="//@data.66"/>
+    <locals mName="fP" value="//@data.67"/>
+    <locals mName="sales" value="//@objects.2"/>
+    <locals mName="sID" value="//@data.68"/>
+    <locals value="//@data.69"/>
+    <dependencies xsi:type="dependencies:PCausalDependence" to="//@decompositions.7" value="//@data.87">
+      <on className="Sales" attributeName="Id">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="87" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:PCausalDependence" from="//@activities.3" to="//@decompositions.7" value="//@data.88">
+      <on className="Sales" attributeName="FinalPrice">
+        <objectID xsi:type="types:PInteger" type="//@types.0" id="88" value="2"/>
+      </on>
+    </dependencies>
+    <dependencies xsi:type="dependencies:POrderDependence" from="//@decompositions.6" to="//@decompositions.7"/>
+  </decompositions>
+  <constraints startTimePoint="0" endTimePoint="1" lower="0" upper="31536000000"/>
+  <constraints startTimePoint="2" endTimePoint="3" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="0" endTimePoint="2" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="3" endTimePoint="1" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="2" endTimePoint="4" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="5" endTimePoint="3" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="2" endTimePoint="6" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="7" endTimePoint="3" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="8" endTimePoint="9" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="4" endTimePoint="8" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="9" endTimePoint="5" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="10" endTimePoint="11" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="4" endTimePoint="10" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="11" endTimePoint="5" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="12" endTimePoint="13" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="4" endTimePoint="12" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="13" endTimePoint="5" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="14" endTimePoint="15" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="4" endTimePoint="14" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="15" endTimePoint="5" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="9" endTimePoint="10" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="11" endTimePoint="12" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="13" endTimePoint="14" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="8" endTimePoint="9" lower="3600000" upper="3600000"/>
+  <constraints startTimePoint="16" endTimePoint="17" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="10" endTimePoint="16" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="17" endTimePoint="11" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="9" endTimePoint="16" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="16" endTimePoint="17" lower="3600000" upper="3600000"/>
+  <constraints startTimePoint="18" endTimePoint="19" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="14" endTimePoint="18" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="19" endTimePoint="15" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="13" endTimePoint="18" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="18" endTimePoint="19" lower="3600000" upper="3600000"/>
+  <constraints startTimePoint="20" endTimePoint="21" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="6" endTimePoint="20" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="21" endTimePoint="7" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="22" endTimePoint="23" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="6" endTimePoint="22" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="23" endTimePoint="7" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="24" endTimePoint="25" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="6" endTimePoint="24" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="25" endTimePoint="7" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="26" endTimePoint="27" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="6" endTimePoint="26" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="27" endTimePoint="7" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="21" endTimePoint="22" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="23" endTimePoint="24" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="25" endTimePoint="26" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="20" endTimePoint="21" lower="3600000" upper="3600000"/>
+  <constraints startTimePoint="28" endTimePoint="29" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="22" endTimePoint="28" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="29" endTimePoint="23" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="21" endTimePoint="28" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="28" endTimePoint="29" lower="3600000" upper="3600000"/>
+  <constraints startTimePoint="30" endTimePoint="31" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="24" endTimePoint="30" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="31" endTimePoint="25" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="23" endTimePoint="30" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="30" endTimePoint="31" lower="3600000" upper="3600000"/>
+  <constraints startTimePoint="32" endTimePoint="33" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="26" endTimePoint="32" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="33" endTimePoint="27" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="25" endTimePoint="32" lower="0" upper="9223372036854775807"/>
+  <constraints startTimePoint="32" endTimePoint="33" lower="3600000" upper="3600000"/>
+  <statistics startLoadTime="2018-06-07T15:45:57.734+0200" endLoadTime="2018-06-07T15:45:57.875+0200" startCompileTime="2018-06-07T15:45:57.875+0200" endCompileTime="2018-06-07T15:45:58.015+0200">
+    <statistics currentTime="2018-06-07T15:45:58.140+0200" numberOfDecisionNodesExplored="1" memoryInUse="29407256" totalMemory="42225664"/>
+    <statistics currentTime="2018-06-07T15:45:58.203+0200" numberOfBacktrackings="3" numberOfDecisionNodesExplored="82" conditionsChecked="84" actionsExpanded="7" methodsExpanded="8" memoryInUse="31239912" totalMemory="42225664"/>
+  </statistics>
+</process:PProcess>

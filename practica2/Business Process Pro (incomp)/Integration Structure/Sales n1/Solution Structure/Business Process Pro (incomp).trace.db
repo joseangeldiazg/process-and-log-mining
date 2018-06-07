@@ -1,0 +1,60 @@
+06-07 15:45:58 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180607154558'; [42102-154]
+06-07 15:45:59 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180607154558'; [42102-154]
+06-07 15:45:59 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180607154558'; [42102-154]
+06-07 15:47:07 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180508211536'; [42102-154]
+06-07 15:47:08 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180607154558'; [42102-154]
+06-07 15:47:11 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180508211536'; [42102-154]
+06-07 15:47:22 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180607154558'; [42102-154]
+06-07 15:47:55 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180607154558'; [42102-154]
+06-07 15:47:55 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180508211536'; [42102-154]
+06-07 15:49:27 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180607154558'; [42102-154]
+06-07 15:49:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180508211536'; [42102-154]
+06-07 15:49:30 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180607154558'; [42102-154]
+06-07 15:49:30 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180508211536'; [42102-154]
+06-07 15:55:06 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180607154558'; [42102-154]
+06-07 16:00:39 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TIMEEXECUTION" no encontrada
+Table "TIMEEXECUTION" not found; SQL statement:
+SELECT * FROM TimeExecution WHERE PlanID='process20180508211536'; [42102-154]

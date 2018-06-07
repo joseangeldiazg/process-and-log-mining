@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<textbuffer:TextBufferContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CMKtextbuffer="http://www.iactive.es/textbuffer/cmktextbuffer" xmlns:EBKtextbuffer="http://www.iactive.es/textbuffer/ebktextbuffer" xmlns:textbuffer="http://www.iactive.es/planner/language/hpdl/textbuffer">
+  <textBufferList xsi:type="CMKtextbuffer:PClassTypeTextBuffer" descriptionTextBuffer="" toStringTextBuffer="" toStringStatus="PENDING">
+    <pclasstype href="model.domain#//@classes.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PPropertyTextBuffer" descriptionTextBuffer="">
+    <pproperty href="model.domain#//@classes.0/@properties.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PPropertyTextBuffer" descriptionTextBuffer="">
+    <pproperty href="model.domain#//@classes.0/@properties.2"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PClassTypeTextBuffer" descriptionTextBuffer="" toStringTextBuffer="" toStringStatus="PENDING">
+    <pclasstype href="model.domain#//@classes.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PPropertyTextBuffer" descriptionTextBuffer="">
+    <pproperty href="model.domain#//@classes.1/@properties.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PPropertyTextBuffer" descriptionTextBuffer="">
+    <pproperty href="model.domain#//@classes.1/@properties.2"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PPropertyTextBuffer" descriptionTextBuffer="">
+    <pproperty href="model.domain#//@classes.1/@properties.3"/>
+  </textBufferList>
+  <textBufferList xsi:type="CMKtextbuffer:PPropertyTextBuffer" descriptionTextBuffer="">
+    <pproperty href="model.domain#//@classes.1/@properties.4"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PActionTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING" conditionTextBuffer="(and &#xD;&#xA;&#x9;(Sales.Id ?s ?salesID)  &#xD;&#xA;&#x9;(Sales.ProductID ?s ?PID)  &#xD;&#xA;&#x9;(Sales.Units ?s ?U)  &#xD;&#xA;&#x9;(Sales.FinalPrice ?s ?old) &#xD;&#xA;&#x9;(Products.Id ?p ?PID)  &#xD;&#xA;&#x9;(Products.UnitPrice ?p ?pU)  &#xD;&#xA;)  " effectTextBuffer="(and &#xD;&#xA;&#x9;(= ?final &#xD;&#xA;&#x9;&#x9;(* ?U ?pU)  &#xD;&#xA;&#x9;)  &#xD;&#xA;&#x9;(not &#xD;&#xA;&#x9;&#x9;(Sales.FinalPrice ?s ?old) &#xD;&#xA;&#x9;)  &#xD;&#xA;&#x9;(Sales.FinalPrice ?s ?final)  &#xD;&#xA;)  " actionTextBuffer="(+ &quot;Sale #&quot; (str ?salesID) &quot;: sold &quot; (str ?U) &quot; units of &quot; (Products.ProductName ?p) &quot; at &quot; (str (Products.UnitPrice ?p)) &quot; each&quot;) " durationTextBuffer="(== $duration 1)">
+    <ptask href="model.domain#//@tasks.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PActionTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING" conditionTextBuffer="" conditionStatus="PENDING" effectTextBuffer="" effectStatus="PENDING" actionTextBuffer="(+ &quot;Sale #&quot; (str ?salesID) &quot;: final invoice amounts to &quot; (str ?finalPrice))" durationTextBuffer="(== $duration 1)">
+    <ptask href="model.domain#//@tasks.2"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PActionTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING" conditionTextBuffer="" conditionStatus="PENDING" effectTextBuffer="" effectStatus="PENDING" actionTextBuffer="(+ &quot;Sale #&quot; (str ?salesID) &quot;: providing large packaging&quot;)" durationTextBuffer="(== $duration 1)">
+    <ptask href="model.domain#//@tasks.3"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PActionTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING" conditionTextBuffer="" conditionStatus="PENDING" effectTextBuffer="" effectStatus="PENDING" actionTextBuffer="(+ &quot;Sale #&quot; &#xD;&#xA;&#x9;(str ?salesID)  &quot;: providing small packaging&quot;&#xD;&#xA;) " durationTextBuffer="(== $duration 1)&#xD;&#xA;">
+    <ptask href="model.domain#//@tasks.4"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PActionTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING" conditionTextBuffer="" conditionStatus="PENDING" effectTextBuffer="" effectStatus="PENDING" actionTextBuffer="(+ &quot;Sale #&quot; (str ?salesID) &quot;: requesting Customs clearance&quot;)" durationTextBuffer="(== $duration 1)">
+    <ptask href="model.domain#//@tasks.5"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="(and &#xD;&#xA;&#x9;(Sales.Id ?sales ?sID)  &#xD;&#xA;&#x9;(Sales.ProductID ?sales ?sPID)  &#xD;&#xA;&#x9;(Sales.Units ?sales ?sU)  &#xD;&#xA;&#x9;(Sales.International ?sales ?sIntl) &#xD;&#xA;&#x9;(Products.Id ?p ?sPID) &#xD;&#xA;&#x9;(Products.UnitPrice ?p ?pU) &#xD;&#xA;)  ">
+    <ptask href="model.domain#//@tasks.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING">
+    <ptask href="model.domain#//@tasks.6"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING">
+    <ptask href="model.domain#//@tasks.7"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskTextBuffer" descriptionTextBuffer="" iterationConditionTextBuffer="" iterationConditionStatus="PENDING">
+    <ptask href="model.domain#//@tasks.8"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskNodeTextBuffer" descriptionTextBuffer="" temporaryTextBuffer="" temporaryStatus="PENDING">
+    <ptaskNode href="model.domain#//@tasks.0/@decompositions.0/@goals.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="(and&#xD;&#xA;&#x9;(Sales.Id ?sales ?salesID)  &#xD;&#xA;&#x9;(Sales.Units ?sales ?sU)  &#xD;&#xA;&#x9;(> ?sU 2) &#xD;&#xA;) ">
+    <method href="model.domain#//@tasks.6/@decompositions.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="" preconditionStatus="PENDING">
+    <method href="model.domain#//@tasks.6/@decompositions.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskNodeTextBuffer" descriptionTextBuffer="" temporaryTextBuffer="" temporaryStatus="PENDING">
+    <ptaskNode href="model.domain#//@tasks.6/@decompositions.0/@goals.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskNodeTextBuffer" descriptionTextBuffer="" temporaryTextBuffer="" temporaryStatus="PENDING">
+    <ptaskNode href="model.domain#//@tasks.6/@decompositions.1/@goals.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="(and&#xD;&#xA;&#x9;(Sales.Id ?sales ?salesID)  &#xD;&#xA;&#x9;(Sales.International ?sales true)&#xD;&#xA;) ">
+    <method href="model.domain#//@tasks.7/@decompositions.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="" preconditionStatus="PENDING">
+    <method href="model.domain#//@tasks.7/@decompositions.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskNodeTextBuffer" descriptionTextBuffer="" temporaryTextBuffer="" temporaryStatus="PENDING">
+    <ptaskNode href="model.domain#//@tasks.7/@decompositions.0/@goals.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="(and &#xD;&#xA;&#x9;(Sales.Id ?sales ?sID) &#xD;&#xA;&#x9;(Sales.FinalPrice ?sales ?fP)&#xD;&#xA;&#x9;(> ?fP 20.0)&#xD;&#xA;) ">
+    <method href="model.domain#//@tasks.8/@decompositions.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="(and &#xD;&#xA;&#x9;(Sales.Id ?sales ?sID) &#xD;&#xA;&#x9;(Sales.FinalPrice ?sales ?fP)&#xD;&#xA;&#x9;(&lt;= ?fP 20.0)&#xD;&#xA;&#x9;(= ?fPS (+ ?fP 5))&#xD;&#xA;) ">
+    <method href="model.domain#//@tasks.8/@decompositions.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskNodeTextBuffer" descriptionTextBuffer="" temporaryTextBuffer="" temporaryStatus="PENDING">
+    <ptaskNode href="model.domain#//@tasks.8/@decompositions.0/@goals.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskNodeTextBuffer" descriptionTextBuffer="" temporaryTextBuffer="" temporaryStatus="PENDING">
+    <ptaskNode href="model.domain#//@tasks.8/@decompositions.1/@goals.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PMethodTextBuffer" descriptionTextBuffer="" preconditionTextBuffer="(= ?fP &#xD;&#xA;&#x9;(+ &#xD;&#xA;&#x9;&#x9;(* ?pU ?sU)  5&#xD;&#xA;&#x9;) &#xD;&#xA;) ">
+    <method href="model.domain#//@tasks.0/@decompositions.0"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskNodeTextBuffer" descriptionTextBuffer="" temporaryTextBuffer="" temporaryStatus="PENDING">
+    <ptaskNode href="model.domain#//@tasks.0/@decompositions.0/@goals.1"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskNodeTextBuffer" descriptionTextBuffer="" temporaryTextBuffer="" temporaryStatus="PENDING">
+    <ptaskNode href="model.domain#//@tasks.0/@decompositions.0/@goals.2"/>
+  </textBufferList>
+  <textBufferList xsi:type="EBKtextbuffer:PTaskNodeTextBuffer" descriptionTextBuffer="" temporaryTextBuffer="" temporaryStatus="PENDING">
+    <ptaskNode href="model.domain#//@tasks.0/@decompositions.0/@goals.3"/>
+  </textBufferList>
+</textbuffer:TextBufferContainer>
