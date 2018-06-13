@@ -4,14 +4,41 @@
 % Texto del capitulo 1
 %---------------------------------------------------
 
-\chapter{Trabajo teórico del tema 1}
+\chapter{Trabajo teórico del tema 2}
 
 En este documento encontramos el trabajo teórico con los conceptos teóricos que sustentan el desarrollo práctico del tema 3 de la asignatura, concretamente el tema de \textbf{Planificación Automática}. Para su resolución se han seguido las transparencias del tema 2 de la asignatura \cite{1}.
 
-\section{Conceptos teóricos relacionados con la práctica}
+\section{Conceptos teóricos relacionados}
 
+En la práctica 2 de la asignatura vimos un proceso simple de negocio adaptativo en el que en función de ciertos conceptos y parámetros nuestro proceso se planifica de manera automática. Estamos por tanto ante los conceptos teóricos de \textbf{planificación automática} y \textbf{ACM} o \textit{Adaptative Case Management}. Sobre estos conceptos hablaremos en este capítulo pero antes es menester al menos introducir o motivar los procesos de negocio tradicionales o modelo \textbf{BPM}. 
+
+	\subsection{BPM y motivación}
+	
+	Los modelos de proceso BPM han sido ampliamente utilizados para representar procedimientos en sectores como banca o seguros donde los trabajos pueden realizarse de forma muy similar o al menos con pequeñas variaciones en la mayoría de los casos. Estos trabajos son predecibles y repetibles ya que hay bastante similaridad en cada instancia de trabajo lo que hace que el modelo BPM se haya extendido tanto. Por otro lado, ¿Qué ocurriría su aplicáramos un modelo de este tipo a la extinción de un incendio o la aplicación de un tratamiento a un paciente? En este caso, existen innumerables factores a tener en cuenta y por tanto necesitaríamos práctica un modelo BPM de proceso por paciente o incendio. Es en ese punto donde este modelo presenta sus limitaciones y se hace necesaria una nueva representación para estos casos donde la capacidad de re-adaptarse es  muy a tener en cuenta. 
+		
+	\subsection{Knowledge Work}
+
+	Las tareas que vimos anteriormente son tareas orientadas a objetivos, buen sea apagar un incendio, curar a un paciente o en el caso de nuestra práctica aplicar unas tasas y gestionar envíos (aunque esto es mucho más básico) estas tareas necesitan dar soporte a las decisiones del trabajador, por lo que modelan sistemas de ayuda a la decisión, que se adaptan conforme el proceso avanza y surgen cambios o ciertos recursos por ejemplo dejan de estar disponibles, en resumen, es un proceso iterativo o cíclico. Este concepto está ligado íntimamente con la práctica dado que nos encontramos ante un problema de conocimiento, que aunque podría ser resuelto con procesos BPM ya que es sencillo, nos otorga como salidas gráficos, diagramas y resultados que en problemas más complejos serían claros recursos de apoyo a la toma de decisiones. 
+	
+	\subsection{ACM y HTN}
+	
+	Tras introducir los conceptos previos estamos en posición de poder estudiar los dos conceptos clave sobre los que la práctica 2 versa, concretamente procesos adaptativos y su planificación automática jerárquica. En el gráfico \ref{ejemplo} podemos ver el resultado final de la práctica, vemos que tenemos entre manos una tarea de planificación automática, para un proceso adaptativo que en función de ciertas condiciones realizará unas tareas u otras esta planificación ademas es jerárquica pues las entradas de fases posteriores del proceso son las salidas de partes anteriores. Comprobado por tanto que estamos ante esta situación, veamos por tanto los conceptos para comprender de una mejor manera las tareas realizadas durante el desarrollo práctico. 
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{./Capitulo1/imagenes/grafico.png}
+		\caption{Gráfico del proceso de la práctica 2.}
+		\label{ejemplo}
+	\end{figure}
+
+
+\begin{itemize}
+	\item \textbf{ACM}: Es una nueva generación de representación de procesos de negocio, se usa para dar respuesta a trabajos del conocimiento, en los cuales podríamos enmarcar en un ejemplo muy sencillo nuestra práctica de ahí que relacionamos este concepto con la práctica 2 de la asignatura. Las características subyacentes de estos procesos suelen ser dinamismo, flexibilidad, capacidad de adaptación y agilidad. De ahí que necesitemos sistemas de planificación automática para modelar los procesos, concretamente en nuestro caso, planificación jerárquica. 
+	\item \textbf{HTN}: La planificación jerárquica es una técnica de planificación automática que permite representar estrategias a distintos niveles de abstracción. Se puede por tanto resolver problemas combinatorios y ademas reducir espacios de búsqueda representando el conocimiento humano dividiendo tareas complejas u objetivos finales en sub tareas o tareas primitivas que deben sucederse. En el caso de nuestro ejemplo, debemos obtener las ventas y para ello el proceso se adapta en función de los ítems en la base de datos que podrían venir en \textit{stream} en un caso real, obteniendo datos finales como su embalaje o envío. Por tanto tendremos el objetivo final de extraer las ventas que se desglosa en primiticas de procesar pedido, envió etc. Es decir, tenemos un claro proceso HTN pero representado en EKDL \cite{2} de Knowledge Studio.
+\end{itemize}
+	
 \section{Conclusiones Finales}
 
-
+En la práctica y tema 2 de la asignatura se ha entrado en detalle en el concepto de los procesos de negocio y su planificación automática haciendo incapie en la importancia de nuevos modelos para resolver problemas complejos del mundo real como la extinción de un incendio. Tras el estudio teórico, se ha comprendido la necesidad de estos sistemas y su gran ayuda en diversos sectores como el de negocio y ventas sobre el cual se ha practicado además en la parte práctica de este tema. 
 \clearpage
 %---------------------------------------------------
